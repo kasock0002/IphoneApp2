@@ -17,7 +17,7 @@ sh scripts/check-macos.sh
 
 ## Автоматическая проверка GitHub
 
-Файл [.github/workflows/ios-check.yml](../.github/workflows/ios-check.yml) запускает проверку на `macos-15` после отправки изменений в `main`, для pull request и по кнопке **Run workflow**. Репозиторий проекта — [kasock0002/IphoneApp2](https://github.com/kasock0002/IphoneApp2). Текущий результат и журналы доступны в [GitHub Actions](https://github.com/kasock0002/IphoneApp2/actions/workflows/ios-check.yml).
+Файл [.github/workflows/ios-check.yml](../.github/workflows/ios-check.yml) запускает проверку на `macos-15-intel` после отправки изменений в `main`, для pull request и по кнопке **Run workflow**. Репозиторий проекта — [kasock0002/IphoneApp2](https://github.com/kasock0002/IphoneApp2). Текущий результат и журналы доступны в [GitHub Actions](https://github.com/kasock0002/IphoneApp2/actions/workflows/ios-check.yml).
 
 Workflow проверяет Python-код сервиса, Swift-ядро и сборку приложения для симулятора. Он использует стандартный Xcode выбранного runner, выводит версию в журнал и не требует секретов. Права токена ограничены чтением исходников; публикация в App Store Connect и TestFlight не выполняется.
 
