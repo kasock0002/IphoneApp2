@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-11-15T10:30:00Z",
+  "projects": [
+    {
+      "id": "example-cloud-environment",
+      "name": "Пример облачного окружения",
+      "subtitle": "Вымышленный пример формата; это не данные вашего аккаунта.",
+      "symbol": "cloud",
+      "tintHex": "92F2C6",
+      "stage": null,
+      "progress": null,
+      "updatedAt": null,
+      "agents": [],
+      "reports": [],
+      "steps": [],
+      "source": "codex-cloud",
+      "cloudTasks": [
+        {
+          "id": "example-task-running",
+          "title": "Пример задачи: подготовить аналитическую панель",
+          "status": "example_running",
+          "url": null,
+          "updatedAt": "2026-11-15T10:25:00Z",
+          "summary": "Синтетическая запись для проверки интерфейса. Статус приведён только как пример, не как официальный перечень статусов Codex."
+        },
+        {
+          "id": "example-task-completed",
+          "title": "Пример задачи: изучить структуру отчётов",
+          "status": "example_completed",
+          "url": null,
+          "updatedAt": null,
+          "summary": null
+        }
+      ]
+    }
+  ]
+}

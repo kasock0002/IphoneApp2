@@ -1,0 +1,14 @@
+.DS_Store
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.ipa
+*.xcarchive
+__pycache__/
+.build/
+.swiftpm/
+.orbit/
+orbit-snapshot.json
+orbit-connection.json
+*.xcresult

@@ -1,0 +1,58 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		4052065249DF3307CE5290A9 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConnectionProfile.swift"; sourceTree = "<group>"; };
+		93C3B2B9D867298694B9F553 = { isa = PBXBuildFile; fileRef = 4052065249DF3307CE5290A9; };
+		E1E7BB6D6F06BA966152A82C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardView.swift"; sourceTree = "<group>"; };
+		361D9EBF82C68A71FDE471A5 = { isa = PBXBuildFile; fileRef = E1E7BB6D6F06BA966152A82C; };
+		19689FF06AB6F6AD2054B7CE = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSourceView.swift"; sourceTree = "<group>"; };
+		CB08D844F28A6E2404B38A4A = { isa = PBXBuildFile; fileRef = 19689FF06AB6F6AD2054B7CE; };
+		A255E6C9039755F8FA59AD8A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DemoData.swift"; sourceTree = "<group>"; };
+		8908CACCF6801C639EEFE305 = { isa = PBXBuildFile; fileRef = A255E6C9039755F8FA59AD8A; };
+		1B0C8FAFE1B09544C5912233 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Models.swift"; sourceTree = "<group>"; };
+		C28E3B592A560C32484F497E = { isa = PBXBuildFile; fileRef = 1B0C8FAFE1B09544C5912233; };
+		01957C46F4533CD19E31B7F7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrbitApp.swift"; sourceTree = "<group>"; };
+		0AFCA1B66EBBE99F00C91768 = { isa = PBXBuildFile; fileRef = 01957C46F4533CD19E31B7F7; };
+		F5A31069B8892897A6837505 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectDetailView.swift"; sourceTree = "<group>"; };
+		9E49AA90481C5874CE029629 = { isa = PBXBuildFile; fileRef = F5A31069B8892897A6837505; };
+		B523ACD8A3959A2897721339 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectSceneView.swift"; sourceTree = "<group>"; };
+		FE252DFCE25E1DBA92E080D6 = { isa = PBXBuildFile; fileRef = B523ACD8A3959A2897721339; };
+		B72FD1877945E13EF43A3286 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotCodec.swift"; sourceTree = "<group>"; };
+		F37F992EB983E21A4D4EAD1D = { isa = PBXBuildFile; fileRef = B72FD1877945E13EF43A3286; };
+		D0D776177823414862B14E79 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotConnection.swift"; sourceTree = "<group>"; };
+		CE45CF79CC31E0FA17A37CB3 = { isa = PBXBuildFile; fileRef = D0D776177823414862B14E79; };
+		9F8CCB1DC0FE7A1DB3C37545 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotStore.swift"; sourceTree = "<group>"; };
+		2F4F5C8B6BC841B42562DC26 = { isa = PBXBuildFile; fileRef = 9F8CCB1DC0FE7A1DB3C37545; };
+		E95984C2429031F651BE7C6F = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme.swift"; sourceTree = "<group>"; };
+		A74D0AEC5B22145C18B557DE = { isa = PBXBuildFile; fileRef = E95984C2429031F651BE7C6F; };
+		5B04B2273026590A440D27C9 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		222F0DBFFE5EB23DCD3FD16F = { isa = PBXBuildFile; fileRef = 5B04B2273026590A440D27C9; };
+		D7719BCBA243F69FFC2713EA = { isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources/example-snapshot.json"; sourceTree = "<group>"; };
+		13E18703AC0F5446F9135C45 = { isa = PBXBuildFile; fileRef = D7719BCBA243F69FFC2713EA; };
+		C742E173F83273816EA786EB = { isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources/example-cloud-snapshot.json"; sourceTree = "<group>"; };
+		A5153CDCC029F154476A9D7C = { isa = PBXBuildFile; fileRef = C742E173F83273816EA786EB; };
+		50BA0D75DD432A25B1DF4895 = { isa = PBXFileReference; lastKnownFileType = text.json; path = "Resources/example-enriched-snapshot.json"; sourceTree = "<group>"; };
+		0AEBADDD1B027FE0DA81D784 = { isa = PBXBuildFile; fileRef = 50BA0D75DD432A25B1DF4895; };
+		C75666A906ECECB3B24031AB = { isa = PBXFileReference; lastKnownFileType = text.xml; path = "Resources/PrivacyInfo.xcprivacy"; sourceTree = "<group>"; };
+		FC0CB21E6ADF24E540AC513C = { isa = PBXBuildFile; fileRef = C75666A906ECECB3B24031AB; };
+		7D1043473D55BFA90E8530D3 = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2A88DEEFF3D1D23E496597 = { isa = PBXGroup; children = (4052065249DF3307CE5290A9, E1E7BB6D6F06BA966152A82C, 19689FF06AB6F6AD2054B7CE, A255E6C9039755F8FA59AD8A, 1B0C8FAFE1B09544C5912233, 01957C46F4533CD19E31B7F7, F5A31069B8892897A6837505, B523ACD8A3959A2897721339, B72FD1877945E13EF43A3286, D0D776177823414862B14E79, 9F8CCB1DC0FE7A1DB3C37545, E95984C2429031F651BE7C6F, 5B04B2273026590A440D27C9, D7719BCBA243F69FFC2713EA, C742E173F83273816EA786EB, 50BA0D75DD432A25B1DF4895, C75666A906ECECB3B24031AB,); path = AgentOrbit; sourceTree = "<group>"; };
+		FBDC4F23F93125BBEEAE800C = { isa = PBXGroup; children = (7D1043473D55BFA90E8530D3,); name = Products; sourceTree = "<group>"; };
+		B28B7AF69320201D1CF206EB = { isa = PBXGroup; children = (3A2A88DEEFF3D1D23E496597, FBDC4F23F93125BBEEAE800C,); sourceTree = "<group>"; };
+		BCE16DD0260827ECF338C787 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (93C3B2B9D867298694B9F553, 361D9EBF82C68A71FDE471A5, CB08D844F28A6E2404B38A4A, 8908CACCF6801C639EEFE305, C28E3B592A560C32484F497E, 0AFCA1B66EBBE99F00C91768, 9E49AA90481C5874CE029629, FE252DFCE25E1DBA92E080D6, F37F992EB983E21A4D4EAD1D, CE45CF79CC31E0FA17A37CB3, 2F4F5C8B6BC841B42562DC26, A74D0AEC5B22145C18B557DE,); runOnlyForDeploymentPostprocessing = 0; };
+		0189424A5A60FED329FA868E = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (222F0DBFFE5EB23DCD3FD16F, 13E18703AC0F5446F9135C45, A5153CDCC029F154476A9D7C, 0AEBADDD1B027FE0DA81D784, FC0CB21E6ADF24E540AC513C,); runOnlyForDeploymentPostprocessing = 0; };
+		7561BFB015D8F536760CB671 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		AB52CB08E0FDF02BF6C67C33 = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = "NO"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CLANG_WARN_DOCUMENTATION_COMMENTS = "YES"; CLANG_WARN_UNREACHABLE_CODE = "YES"; DEBUG_INFORMATION_FORMAT = "dwarf"; GCC_C_LANGUAGE_STANDARD = "gnu17"; GCC_WARN_64_TO_32_BIT_CONVERSION = "YES"; IPHONEOS_DEPLOYMENT_TARGET = "17.0"; ONLY_ACTIVE_ARCH = "YES"; SDKROOT = "iphoneos"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = "5.0"; }; name = Debug; };
+		5283471FF90C511CFE244FFF = { isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = "NO"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CLANG_WARN_DOCUMENTATION_COMMENTS = "YES"; CLANG_WARN_UNREACHABLE_CODE = "YES"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = "gnu17"; GCC_WARN_64_TO_32_BIT_CONVERSION = "YES"; IPHONEOS_DEPLOYMENT_TARGET = "17.0"; SDKROOT = "iphoneos"; SWIFT_COMPILATION_MODE = "wholemodule"; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = "5.0"; }; name = Release; };
+		4BA304E783CFBB9FA6E56552 = { isa = XCConfigurationList; buildConfigurations = (AB52CB08E0FDF02BF6C67C33, 5283471FF90C511CFE244FFF,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		59E1BEE911F66DA37FEBACDC = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon"; CODE_SIGN_STYLE = "Automatic"; CURRENT_PROJECT_VERSION = "5"; ENABLE_PREVIEWS = "YES"; GENERATE_INFOPLIST_FILE = "NO"; INFOPLIST_FILE = "AgentOrbit/Info.plist"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = "0.5"; PRODUCT_BUNDLE_IDENTIFIER = "app.orbit.projectdesk"; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO"; SWIFT_EMIT_LOC_STRINGS = "YES"; TARGETED_DEVICE_FAMILY = "1"; }; name = Debug; };
+		F4C425279CD5DDD18FD6DC6D = { isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon"; CODE_SIGN_STYLE = "Automatic"; CURRENT_PROJECT_VERSION = "5"; ENABLE_PREVIEWS = "YES"; GENERATE_INFOPLIST_FILE = "NO"; INFOPLIST_FILE = "AgentOrbit/Info.plist"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; MARKETING_VERSION = "0.5"; PRODUCT_BUNDLE_IDENTIFIER = "app.orbit.projectdesk"; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SUPPORTS_MACCATALYST = "NO"; SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = "NO"; SWIFT_EMIT_LOC_STRINGS = "YES"; TARGETED_DEVICE_FAMILY = "1"; }; name = Release; };
+		1329ED92EA4767251759D0DA = { isa = XCConfigurationList; buildConfigurations = (59E1BEE911F66DA37FEBACDC, F4C425279CD5DDD18FD6DC6D,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		0E8A3AD980EC179856012B7E = { isa = PBXNativeTarget; buildConfigurationList = 1329ED92EA4767251759D0DA; buildPhases = (BCE16DD0260827ECF338C787, 7561BFB015D8F536760CB671, 0189424A5A60FED329FA868E,); buildRules = (); dependencies = (); name = Orbit; productName = Orbit; productReference = 7D1043473D55BFA90E8530D3; productType = "com.apple.product-type.application"; };
+		98F54143AB4E86B28C3AFEE0 = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = YES; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = { 0E8A3AD980EC179856012B7E = { CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = 4BA304E783CFBB9FA6E56552; compatibilityVersion = "Xcode 14.0"; developmentRegion = ru; hasScannedForEncodings = 0; knownRegions = (ru, en, Base,); mainGroup = B28B7AF69320201D1CF206EB; productRefGroup = FBDC4F23F93125BBEEAE800C; projectDirPath = ""; projectRoot = ""; targets = (0E8A3AD980EC179856012B7E,); };
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0;
+}

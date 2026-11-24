@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-11-15T10:30:00Z",
+  "projects": [
+    {
+      "id": "example-cloud-environment",
+      "name": "Аналитика — пример",
+      "subtitle": "Вымышленные данные для изучения формата",
+      "symbol": "chart.xyaxis.line",
+      "tintHex": "92F2C6",
+      "stage": "development",
+      "progress": 0.6,
+      "updatedAt": "2026-11-15T10:15:00Z",
+      "agents": [
+        {
+          "id": "example-analyst",
+          "name": "Пример аналитика",
+          "role": "Аналитик",
+          "status": "working",
+          "currentTask": "Проверяет контрольные расчёты в демонстрационном проекте."
+        },
+        {
+          "id": "example-reviewer",
+          "name": "Пример проверяющего",
+          "role": "Проверка данных",
+          "status": "completed",
+          "currentTask": "Проверил структуру демонстрационных входных данных."
+        }
+      ],
+      "reports": [
+        {
+          "id": "example-report-1",
+          "title": "Пример отчёта о проверке данных",
+          "summary": "Это вымышленный отчёт. Он показывает, как агент может передать проверенные результаты в карточку проекта.",
+          "createdAt": "2026-11-15T10:10:00Z",
+          "highlights": [
+            "В примере согласованы вопросы аналитики.",
+            "В примере подготовлена структура сводной панели.",
+            "Далее запланирована проверка расчётов."
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "id": "example-step-1",
+          "title": "Определить вопросы аналитики",
+          "detail": "Демонстрационный завершённый шаг.",
+          "isComplete": true
+        },
+        {
+          "id": "example-step-2",
+          "title": "Подготовить пример данных",
+          "detail": "Демонстрационный завершённый шаг.",
+          "isComplete": true
+        },
+        {
+          "id": "example-step-3",
+          "title": "Собрать основу панели",
+          "detail": "Демонстрационный завершённый шаг.",
+          "isComplete": true
+        },
+        {
+          "id": "example-step-4",
+          "title": "Проверить расчёты",
+          "detail": "Демонстрационный следующий шаг.",
+          "isComplete": false
+        },
+        {
+          "id": "example-step-5",
+          "title": "Оформить итоговый обзор",
+          "detail": "Демонстрационный будущий шаг.",
+          "isComplete": false
+        }
+      ],
+      "source": "codex-cloud",
+      "cloudTasks": [
+        {
+          "id": "example-task-running",
+          "title": "Пример задачи: подготовить аналитическую панель",
+          "status": "example_running",
+          "url": null,
+          "updatedAt": "2026-11-15T10:25:00Z",
+          "summary": "Синтетическая запись для проверки интерфейса. Статус приведён только как пример, не как официальный перечень статусов Codex."
+        },
+        {
+          "id": "example-task-completed",
+          "title": "Пример задачи: изучить структуру отчётов",
+          "status": "example_completed",
+          "url": null,
+          "updatedAt": null,
+          "summary": null
+        }
+      ],
+      "briefUpdatedAt": "2026-11-15T10:15:00Z",
+      "briefSource": "Демонстрационный агент"
+    }
+  ]
+}

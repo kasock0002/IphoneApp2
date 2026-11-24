@@ -1,0 +1,53 @@
+name: iPhone build checks
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  simulator-build:
+    name: Tests and unsigned iPhone Simulator build
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Show toolchain versions
+        run: |
+          xcodebuild -version
+          swift --version
+          python3 --version
+
+      - name: Test the bridge and report delivery
+        run: python3 -m unittest discover -s bridge -v
+
+      - name: Test Swift core and build the simulator app
+        run: sh scripts/check-macos.sh
+
+      - name: Package the unsigned simulator app
+        run: |
+          test -d build/Build/Products/Debug-iphonesimulator/Orbit.app
+          mkdir -p build/artifacts
+          ditto -c -k --sequesterRsrc --keepParent \
+            build/Build/Products/Debug-iphonesimulator/Orbit.app \
+            build/artifacts/Orbit-simulator-unsigned.zip
+
+      - name: Upload the simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orbit-simulator-unsigned
+          path: build/artifacts/Orbit-simulator-unsigned.zip
+          if-no-files-found: error
+          retention-days: 7
