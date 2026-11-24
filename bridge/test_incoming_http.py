@@ -112,7 +112,10 @@ class IncomingHTTPTests(unittest.TestCase):
         with incoming_server(self.cache, self.receiver) as (server, wake):
             self.assertEqual(exchange(server, payload=b"not-json")[0], 422)
             self.assertEqual(exchange(server, payload=self.data(), headers={"Content-Type": "text/plain"})[0], 415)
-            self.assertEqual(exchange(server, payload=b"x" * (256 * 1024 + 1))[0], 413)
+            # The server rejects the advertised size before reading a body. Do
+            # not race that early response against a large sendall on macOS.
+            self.assertEqual(exchange(server, payload=None,
+                                      headers={"Content-Length": str(256 * 1024 + 1)})[0], 413)
             self.assertEqual(exchange(server, payload=self.data(), headers={"Transfer-Encoding": "chunked"})[0], 400)
             self.assertEqual(exchange(server, payload=self.data(), path="/briefs?project=other")[0], 404)
             self.assertFalse(wake.is_set())

@@ -75,6 +75,8 @@ class HTTPSDeliveryTests(unittest.TestCase):
             "[server_extensions]\n"
             "basicConstraints=critical,CA:FALSE\n"
             "keyUsage=critical,digitalSignature,keyEncipherment\n"
+            "subjectKeyIdentifier=hash\n"
+            "authorityKeyIdentifier=keyid:always\n"
             "extendedKeyUsage=serverAuth\n"
             "subjectAltName=@alternative_names\n"
             "[alternative_names]\n"
