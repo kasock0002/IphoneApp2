@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   simulator-build:
-    name: Tests and unsigned iPhone Simulator build
+    name: Tests and builds for iPhone and Simulator
     runs-on: macos-15-intel
     timeout-minutes: 30
     steps:
@@ -49,5 +49,28 @@ jobs:
         with:
           name: Orbit-simulator-unsigned
           path: build/artifacts/Orbit-simulator-unsigned.zip
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Build and package the iPhone IPA for personal signing
+        run: |
+          xcodebuild -project AgentOrbit.xcodeproj -scheme Orbit \
+            -sdk iphoneos -destination 'generic/platform=iOS' \
+            -configuration Release -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+          app="build/Build/Products/Release-iphoneos/Orbit.app"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleSupportedPlatforms:0' "$app/Info.plist")" = "iPhoneOS"
+          xcrun lipo "$app/Orbit" -verify_arch arm64
+          xcrun vtool -show-build "$app/Orbit" | grep -E 'platform[[:space:]]+IOS$'
+          payload="$RUNNER_TEMP/orbit-device/Payload"
+          mkdir -p "$payload"
+          ditto "$app" "$payload/Orbit.app"
+          ditto -c -k --norsrc --noextattr --keepParent "$payload" build/artifacts/Orbit.ipa
+          unzip -tq build/artifacts/Orbit.ipa
+
+      - name: Upload the iPhone IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orbit-iPhone
+          path: build/artifacts/Orbit.ipa
           if-no-files-found: error
           retention-days: 7

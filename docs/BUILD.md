@@ -1,6 +1,15 @@
 # Проверка сборки и установка Orbit
 
-В проект добавлена проверка настоящей сборки приложения на macOS. Она нужна отдельно от компиляции моделей Foundation и синтаксического разбора Swift-файлов в Linux: эти проверки не проверяют доступность API SwiftUI, UIKit и SceneKit или сборку ресурсов iPhone-приложения.
+## Установка с Windows
+
+Понадобятся Windows 10 или новее, iPhone с iOS 17 или новее, USB-кабель с передачей данных и личная учётная запись Apple. Готовое приложение собирает Xcode в GitHub Actions.
+
+1. На компьютере войдите в GitHub, откройте последнюю успешную сборку для ветки `main` и скачайте **Orbit-iPhone** в разделе **Artifacts**. Извлеките из ZIP файл **Orbit.ipa**. [Сборки Orbit](https://github.com/kasock0002/IphoneApp2/actions/workflows/ios-check.yml)
+2. Установите **AltServer для Windows**, а также версии iTunes и iCloud с сайта Apple по ссылкам в инструкции AltStore. Запустите AltServer от имени администратора. [Инструкция для Windows](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows)
+3. Подключите разблокированный iPhone по USB и подтвердите **«Доверять этому компьютеру»**. Удерживая **Shift**, нажмите значок AltServer возле часов Windows. Выберите **Sideload .ipa…**, свой iPhone и файл **Orbit.ipa**. Введите данные своей учётной записи Apple в окне AltServer для персональной подписи. [Установка IPA через AltServer](https://faq.altstore.io/release-notes/altserver)
+4. На iPhone откройте **Настройки → Конфиденциальность и безопасность → Режим разработчика**, включите режим, перезагрузите телефон и подтвердите включение. Если iOS попросит доверить разработчику, откройте **Настройки → Основные → VPN и управление устройством**, выберите профиль своей учётной записи и подтвердите доверие. Затем откройте Orbit.
+
+С бесплатной учётной записью Apple подпись действует **7 дней**. Чтобы продлить её при таком способе установки, повторите шаг 3 с той же учётной записью и сохраните установленное приложение и его данные. [Срок персональной подписи](https://faq.altstore.io/altstore-classic/your-altstore)
 
 ## Проверка на своём Mac
 
@@ -19,11 +28,11 @@ sh scripts/check-macos.sh
 
 Файл [.github/workflows/ios-check.yml](../.github/workflows/ios-check.yml) запускает проверку на `macos-15-intel` после отправки изменений в `main`, для pull request и по кнопке **Run workflow**. Репозиторий проекта — [kasock0002/IphoneApp2](https://github.com/kasock0002/IphoneApp2). Текущий результат и журналы доступны в [GitHub Actions](https://github.com/kasock0002/IphoneApp2/actions/workflows/ios-check.yml).
 
-Workflow проверяет Python-код сервиса, Swift-ядро и сборку приложения для симулятора. Он использует стандартный Xcode выбранного runner, выводит версию в журнал и не требует секретов. Права токена ограничены чтением исходников; публикация в App Store Connect и TestFlight не выполняется.
+Workflow проверяет Python-код сервиса, Swift-ядро и собирает Orbit для симулятора и физического iPhone. Для телефона Xcode использует конфигурацию Release и SDK `iphoneos`. Перед упаковкой проверяются архитектура `arm64` и платформа iOS исполняемого файла.
 
-После успешной сборки появляется artifact **Orbit-simulator-unsigned**. Это ZIP с `Orbit.app` **для симулятора**. Его нельзя установить на физический iPhone или загрузить в TestFlight как готовую iOS-сборку. Artifact хранится семь дней.
+В разделе **Artifacts** семь дней доступны два архива. В **Orbit-iPhone** находится `Orbit.ipa` для персональной подписи. В **Orbit-simulator-unsigned** находится `Orbit.app` в ZIP для симулятора на Mac.
 
-## Установка на физический iPhone
+## Установка с Mac
 
 1. Откройте `AgentOrbit.xcodeproj` на Mac.
 2. Выберите target **Orbit → Signing & Capabilities** и свою Team. При необходимости замените Bundle Identifier на уникальный.
